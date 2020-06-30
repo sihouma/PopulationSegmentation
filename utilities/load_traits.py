@@ -1,15 +1,5 @@
-#!/usr/bin/env python
-# -*- coding: utf-8
-
-# Import Required Libraries
 import os
 import json
-
-
-#######
-# Load the author age, sex, and personality traits
-#############
-
 
 def load_traits(DIR):
     traits = {}
@@ -24,5 +14,5 @@ def load_traits(DIR):
         "agreeable":bits[5],
 
         "conscientious":bits[6],
-        "open": bits[7]}
+        "open": bits[7].strip('\n')}
     return traits

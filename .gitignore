@@ -1,0 +1,5 @@
+data/pan15/english/user*.txt
+data/train.tsv
+.ipynb_checkpoints
+.idea
+__pycache__

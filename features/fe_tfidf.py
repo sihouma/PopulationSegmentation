@@ -6,8 +6,6 @@ from __future__ import print_function
 import numpy as np
 import pandas as pd
 import argparse
-import os
-import codecs
 
 # Local imports
 from utilities.load_tweets import load_tweets

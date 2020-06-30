@@ -42,12 +42,10 @@ def load_tweets(DIR, mix=True):
         tweets_ = {}
         order_ = []
         for i, id_user in enumerate(ids):
-            try:
-                tweets_[id_user[0][1]].append(" ".join(tweets[i]).strip())
-            except KeyError:
-                tweets_[id_user[0][1]] = [" ".join(tweets[i]).strip()]
-                order_.append(id_user[0][1])
+            tweets_[id_user[0][1]] = tweets[i]
+            order_.append(id_user[0][1])
         tweets = tweets_
         #tweets = [" ".join(tweets_[id_user]) for id_user in order_]
         ids = order_
+
     return tweets, ids

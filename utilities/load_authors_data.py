@@ -21,12 +21,10 @@ def load_authors_data(DIR, mix=True):
     tweets, ids = load_tweets(DIR, mix)
     traits = load_traits(DIR)
 
-    # Create pandas Dataframce
-    df_tweets = pd.DataFrame.from_dict(tweets, orient='index', columns=['tweets'])
-    df_traits = pd.DataFrame.from_dict(traits, orient='index')
+    for key in tweets:
+        traits[key].update({'tweets': tweets[key]})
 
-    df_authors = df_traits.join(df_tweets)
-
+    df_authors = pd.DataFrame.from_dict(traits, orient='index')
     return df_authors
 
 

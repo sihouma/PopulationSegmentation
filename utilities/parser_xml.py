@@ -1,11 +1,6 @@
 import xml.etree.ElementTree as ET
 import json, os
 
-########################
-# Read the original file to crawl the tweets
-########################
-
-
 array_data = []
 
 

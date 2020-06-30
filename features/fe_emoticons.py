@@ -40,7 +40,7 @@ if __name__ == "__main__":
 
     p.add_argument("--stopwords", default=None,
                    action="store", dest="stopwords",
-                   help="List of stop words [data/stopwords.txt]")
+                   help="List of stop words [data/stop_words/stop_words_en.txt]")
 
     opts = p.parse_args()
 
